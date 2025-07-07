@@ -21,6 +21,7 @@ public class LeafController : MonoBehaviour
     [Header("Audio")]
     [SerializeField] private AudioSource leafAudioSource;
     [SerializeField] private AudioClip groundHitSFX;
+    [SerializeField] private AudioClip grabSFX;
 
     private Vector2 _velocity;
     private bool _isPlayerInteracting = false;
@@ -48,6 +49,9 @@ public class LeafController : MonoBehaviour
 
             // Player need to click on the actual leaf, to drag it
             _isPlayerInteracting = IsPointerOverLeaf(mouseWorld);
+
+            // Small audio detail, play SFX when grabbing the leaf
+            if (_isPlayerInteracting) leafAudioSource.PlayOneShot(grabSFX);
         }
 
         if (_isPlayerInteracting)
