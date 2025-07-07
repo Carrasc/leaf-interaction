@@ -22,3 +22,8 @@ A simple Unity project that simulates physics and interaction with a floating le
 
 - **Click & drag** the leaf to move it.
 - **Release** the mouse to throw it with a floaty, physics-like motion.
+
+Credits and assets used:
+Leaf sprite: C-mo Box from Flaticon.
+SFX for leaf: Zapsplat Plant Hit SFX.
+SFX for grab: Asset store Modern UI SFX.
