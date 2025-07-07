@@ -500,7 +500,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: f5e35b44744b74e9e818a9b691141287, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -545,7 +545,7 @@ MonoBehaviour:
   swayFrequency: 2
   flutterAngleAmplitude: 20
   flutterSpeed: 3
-  dragFollowSpeed: 10
+  dragFollowSpeed: 8
   grabRadius: 0.5
   leafAudioSource: {fileID: 1860521680}
   groundHitSFX: {fileID: 8300000, guid: 884b2a671be3548969d65ce4f62396d8, type: 3}

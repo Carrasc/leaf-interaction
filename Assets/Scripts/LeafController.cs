@@ -71,6 +71,15 @@ public class LeafController : MonoBehaviour
                 // Apply throw velocity
                 _velocity = _throwVelocity;
             }
+
+            // Direction vector from leaf to cursor
+            Vector2 dragDirection = mouseWorld - transform.position;
+
+            if (dragDirection.sqrMagnitude > 0.001f) // avoid NaN on very small movements
+            {
+                float angle = Mathf.Atan2(dragDirection.y, dragDirection.x) * Mathf.Rad2Deg;
+                transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(0f, 0f, angle), dragFollowSpeed * Time.deltaTime);
+            }
         }
     }
 
@@ -125,7 +134,7 @@ public class LeafController : MonoBehaviour
 
         // Small rotation as well, to seem more realistic
         float flutterAngle = Mathf.Sin(_swayTime * flutterSpeed) * flutterAngleAmplitude;
-        transform.rotation = Quaternion.Euler(0f, 0f, flutterAngle);
+        transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(0f, 0f, flutterAngle), 2f * Time.deltaTime);
     }
 
     /// <summary>
