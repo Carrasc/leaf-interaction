@@ -2,6 +2,8 @@
 
 A simple Unity project that simulates physics and interaction with a floating leaf, including gravity, air resistance, sway, drag/throw, bounce, and squash/stretch. All without using Unity’s built in physics (no Rigidbody2D or colliders).
 
+WebGL demo available here -> https://carrasc.github.io/leaf-demo/
+
 ## 🛠️ Features
 - Custom gravity & terminal velocity
 - Air resistance with X/Y drag
